@@ -48,3 +48,33 @@ Figma 端逐项主要显示导出分辨率、暂停或错误，SU 目标绑定�
 确定 GitHub 备份仓库并建立授权连接，上传本日志。
 确认 Factory 接收交接，待其提交方案和实现后检查差异与测试。
 本日志不包含源码、图片、密钥、连接码、运行会话或个人档案。
+
+---
+
+## English development log — 2026-10-29 (Asia/Shanghai)
+
+Project location in the original record: E:\Codex\workspace\figma-su-live.
+
+1. Verified project state
+package.json version: 0.3.0. Figma plugin name: “Figma → SU 实时画面”. The project contained figma, src, tests and 开始使用.md; no .git directory was seen then. Both UIs, manifest, package.json, instructions, callbacks and window settings were inspected. That session had not modified plugin source, installed extensions or run tests.
+
+2. Existing functionality, based on source and instructions
+Multiple Figma frames/images can independently bind to SketchUp faces or Image objects and update textures. Automatic/manual updates, resolution selection, per-item pause, removal and unbinding are supported. Communication uses localhost:18743 and a random connection code. Bindings last only for the current session; editing/undoing the SU model may require selecting targets again. Historical simulated/native-pipeline results were not rerun and do not establish current validation. Real multi-image Figma/SU end-to-end verification remained incomplete. Instructions had old D-drive paths, while the project was on E; actual runtime paths need checking.
+
+3. Product-experience review
+First-use connection, adding sources and target binding were mixed with daily controls. Figma items mainly showed export resolution, pause or errors; SU binding/application status needed clearer feedback. Connection settings occupied the top continuously; long names and multi-image lists needed hierarchy. Disconnects and invalid targets needed recovery actions. Terminology, button hierarchy and state feedback needed consistency. These were source-review conclusions, not real-interface user tests.
+
+4. User-assigned responsibilities
+Factory / Droid was to lead product experience and UI improvements; Codex would check implementation/tests. The user said Factory was open, but no local droid/factory command or matching process was found. A copyable handoff prompt was provided; receipt or execution by Factory was unconfirmed.
+
+5. Factory handoff
+Read 开始使用.md, figma/ui.html, figma/code.js, src/kw_clipboard_swap/live.html and src/kw_clipboard_swap/live.rb first. Propose a concise product approach before implementation:
+- Clearly guide connection, image addition and target binding; emphasize the image list after connection.
+- Use real backend data to distinguish awaiting binding, updating, synchronized, paused, failed and rebinding required.
+- Give causes and actionable recovery for disconnects/invalid bindings.
+- Unify terminology/hierarchy and improve long names, many images and small windows.
+- Use natural tracking and clear whitespace; avoid decorative tech blue or purposeless tiny text.
+Preserve multi-image sync, front/back binding, resolution selection and undo protection. Do not change protocols or model behavior without verification. Follow AGENTS.md; do not operate screens or use UI automation, and do not read/share session connection codes. Verify D/E paths; do not automatically overwrite installed SketchUp extensions. Run applicable tests and report changes, verification, unverified behavior, installation and rollback.
+
+6. Next steps in the historical record
+Choose and authorize a GitHub backup repository and upload the log. Confirm Factory received the handoff, then review its proposed implementation and tests. This log contains no source code, images, secrets, connection codes, runtime sessions or personal dossiers.
